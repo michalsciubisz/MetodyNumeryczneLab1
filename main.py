@@ -83,7 +83,7 @@ def custom_matrix(m:int, n:int):
     else:
         return None
     
-    if m < 0 or n < 0:
+    if m <= 0 or n <= 0:
         return None
 
     Matrix = np.zeros((m,n)) #stworzenie macierzy o zadanych rozmiarach, ktora zostanie uzupelniona   
