@@ -78,9 +78,13 @@ def custom_matrix(m:int, n:int):
     Returns:
     np.ndarray: macierz zgodna z opisem z zadania 7.
     """
-    if isinstance(m, int) or isinstance(n, int):
+    if isinstance(m, int) and isinstance(n, int) :
+        pass
+    else:
         return None
-
+    
+    if m < 0 or n < 0:
+        return None
 
     Matrix = np.zeros((m,n)) #stworzenie macierzy o zadanych rozmiarach, ktora zostanie uzupelniona   
 
