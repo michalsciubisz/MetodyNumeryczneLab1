@@ -78,12 +78,16 @@ def custom_matrix(m:int, n:int):
     Returns:
     np.ndarray: macierz zgodna z opisem z zadania 7.
     """
+    if m is not int or n is not int:
+        return None
+
+
     Matrix = np.zeros((m,n)) #stworzenie macierzy o zadanych rozmiarach, ktora zostanie uzupelniona   
 
     for a in range(0,n): #utworzone dwie petle ktore nastepnie wypelniaja odpowiednio kazdy element macierzy, ten sposob wymaga wykorzystania wiekszej mocy obliczeniowej poniewaz 
         for b in range(0,m): #funkcja w kazdej petli spradza warunek if
             if m > n:
-                Matrix[b,a] = b
+                Matrix[b,a] = b + 1
             else:
-                Matrix[b,a] = a
+                Matrix[b,a] = a + 1
     return Matrix
