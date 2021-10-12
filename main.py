@@ -78,7 +78,7 @@ def custom_matrix(m:int, n:int):
     Returns:
     np.ndarray: macierz zgodna z opisem z zadania 7.
     """
-    if m is not int or n is not int:
+    if isinstance(m, int) or isinstance(n, int):
         return None
 
 
